@@ -11,7 +11,14 @@ namespace FoodMenuConsole
     {
         static void Main(string[] args)
         {
-            Console.Title = "Food Menu Console Application";
+            try
+            {
+                Console.Title = "Food Menu Console Application";
+            }
+            catch
+            {
+                // Ignore if console title cannot be set in this environment
+            }
 
             string connectionString = "Server=(localdb)\\mssqllocaldb;Database=FoodMenuDb;Trusted_Connection=True;TrustServerCertificate=True;";
 

@@ -19,7 +19,14 @@ namespace FoodMenuConsole.Menus
 
             while (running)
             {
-                Console.Clear();
+                try
+                {
+                    Console.Clear();
+                }
+                catch
+                {
+                    // Ignore when running in environments where console buffer handle cannot be cleared
+                }
 
                 Console.WriteLine("========================================");
                 Console.WriteLine("        FOOD MENU MANAGEMENT");
