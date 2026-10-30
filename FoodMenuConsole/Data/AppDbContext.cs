@@ -1,3 +1,4 @@
+
 using FoodMenuConsole.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,6 +12,8 @@ namespace FoodMenuConsole.Data
         }
 
         public DbSet<FoodItem> FoodItems { get; set; } = null!;
+
+        public DbSet<AuditLog> AuditLogs { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
